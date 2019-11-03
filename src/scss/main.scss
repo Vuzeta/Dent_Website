@@ -2,6 +2,12 @@
 @import 'utilities/mixins';
 
 @import 'tools/reset';
+@import 'components/hamburger';
+@import 'components/navigation';
+
+@import 'layouts/header';
+@import 'layouts/hero';
+@import 'layouts/about';
 
 * {
   box-sizing: border-box;
@@ -15,4 +21,15 @@ html {
 body {
   font-family: $font-primary;
   font-size: $font-size-normal;
+  height: 200vh;
+}
+
+.section__heading {
+  font-size: $font-size-large;
+  font-weight: $font-weight-medium;
+  background-color: $color-light-blue;
+  color: $color-white;
+  text-align: center;
+  line-height: 56px;
+  box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.3);
 }
