@@ -8,7 +8,7 @@ module.exports = {
   entry: './src/js/main.js',
   output: {
     path: path.resolve(__dirname, '../', 'build'),
-    filename: 'js/[name]-[contenthash].js',
+    filename: '[name]-[contenthash].js',
   },
   module: {
     rules: [
@@ -90,7 +90,7 @@ module.exports = {
       },
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name]-[contenthash].css',
+      filename: '[name]-[contenthash].css',
     }),
   ],
 };

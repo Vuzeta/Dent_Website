@@ -1,0 +1,21 @@
+.price {
+  &__image {
+    width: 170px;
+    height: 45px;
+    background-image: url('../assets/doctors_640.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  &__title {
+    text-align: center;
+    font-size: $font-size-medium-large;
+  }
+
+  &__description {
+    padding: 0px 20px;
+    line-height: $line-height-small;
+    color: $color-elegant-light;
+    text-align: center;
+  }
+}

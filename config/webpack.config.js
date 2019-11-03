@@ -8,7 +8,7 @@ module.exports = {
   entry: './src/js/main.js',
   output: {
     path: path.resolve(__dirname, '../', 'build'),
-    filename: 'js/[name].js',
+    filename: '[name].js',
   },
   module: {
     rules: [
@@ -85,7 +85,8 @@ module.exports = {
       template: 'src/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].css',
+      filename: '[name].css',
+      publicPath: '../',
     }),
   ],
 };
