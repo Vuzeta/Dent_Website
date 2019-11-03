@@ -1,0 +1,67 @@
+.service {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+    margin-top: 10px;
+
+    &:nth-child(1) {
+      margin-top: 10px;
+    }
+  }
+
+  &__icon {
+    width: 54px;
+    height: 54px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &__item:nth-child(1) &__icon {
+    background-image: url('../assets/prevention.svg');
+  }
+  &__item:nth-child(2) &__icon {
+    background-image: url('../assets/surgery.svg');
+  }
+  &__item:nth-child(3) &__icon {
+    background-image: url('../assets/prosthetics.svg');
+  }
+  &__item:nth-child(4) &__icon {
+    background-image: url('../assets/esthetics.svg');
+  }
+  &__item:nth-child(5) &__icon {
+    background-image: url('../assets/endodontics.svg');
+  }
+  &__item:nth-child(6) &__icon {
+    background-image: url('../assets/implant.svg');
+  }
+
+  &__title {
+    font-size: $font-size-medium-large;
+  }
+
+  &__description {
+    padding: 0px 20px;
+    line-height: $line-height-small;
+    color: $color-elegant-light;
+    text-align: center;
+  }
+
+  &__line {
+    width: 37px;
+    height: 2px;
+    background-color: $color-light-blue;
+  }
+
+  &__item:nth-child(6) &__line {
+    width: 0;
+  }
+}

@@ -1,8 +1,9 @@
 .about {
+  margin-bottom: 20px;
   &__wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 550px;
+    min-height: 580px;
     justify-content: space-between;
     align-items: center;
   }
