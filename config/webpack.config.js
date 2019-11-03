@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../', 'build'),
     filename: 'js/[name].js',
-    publicPath: '/',
+    publicPath: './',
   },
   module: {
     rules: [
@@ -58,7 +58,7 @@ module.exports = {
             options: {
               name: '[name].[ext]',
               outputPath: 'assets',
-              publicPath: '../assets',
+              publicPath: './assets',
             },
           },
           {

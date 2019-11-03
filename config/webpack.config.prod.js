@@ -57,7 +57,7 @@ module.exports = {
             options: {
               name: '[contenthash].[ext]',
               outputPath: 'assets',
-              publicPath: '../assets',
+              publicPath: './assets',
             },
           },
           {
