@@ -1,11 +1,18 @@
 .price {
+height: 200vh;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 500px;
+    margin-bottom: 20px;
+  }
   &__image {
-    width: 170px;
-    height: 45px;
+    height: 300px;
     background-image: url('../assets/doctors_640.jpg');
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
   }
   &__title {
     text-align: center;
@@ -18,4 +25,59 @@
     color: $color-elegant-light;
     text-align: center;
   }
+
+  &__wrapper-list-col {
+    display: flex;
+    justify-content: space-between;
+    // background-color: gray;
+    height: 50px;
+    padding: 0px 20px;
+  }
+
+  &__wrapper-title {
+    align-self: center;
+  }
+
+  &__icon {
+    font-size: 4rem;
+    color: $color-light-blue;
+    transition: 0.5s;
+    transform-origin: center;
+
+  }
+
+  &__wrapper-list-item {
+    height: 50px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  &__wrapper-list-item--show {
+    height: 250px;
+  }
+
+  &__wrapper-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  &__wrapper-row {
+    border: 1px solid rgba(0,0,0,0.1);
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+
+    &:nth-child(even) {
+      background-color: #dddddd;
+    }
+  }
+
+  td, th {
+    border: 1px solid rgba(0,0,0,0.1);
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+  }
 }
+
+
