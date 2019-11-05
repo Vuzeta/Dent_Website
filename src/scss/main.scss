@@ -10,6 +10,7 @@
 @import 'layouts/about';
 @import 'layouts/service';
 @import 'layouts/price';
+@import 'layouts/contact';
 
 * {
   box-sizing: border-box;
@@ -23,7 +24,6 @@ html {
 body {
   font-family: $font-primary;
   font-size: $font-size-normal;
-  height: 200vh;
 }
 
 .section__heading {
