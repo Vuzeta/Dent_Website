@@ -1,0 +1,12 @@
+.footer {
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 30px;
+    text-align: center;
+
+    &__description {
+        color: $color-light-blue;
+    }
+}
