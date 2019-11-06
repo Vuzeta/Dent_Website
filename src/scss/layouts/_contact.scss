@@ -76,6 +76,7 @@
 
     &__form-area, &__form-input {
         border: 1px solid transparent;
+        outline: none;
         &:focus {
             border: 1px solid $color-light-blue;
         }
