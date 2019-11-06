@@ -241,10 +241,10 @@
                 </div>
                 <h3 class="contact__title">Zadzwoń do nas lub napisz</h3>
                 <form action="" class="contact__form">
-                    <input type="text" placeholder="imię" class="contact__form-input">
-                    <input type="text" placeholder="nazwisko" class="contact__form-input">
-                    <input type="email" placeholder="adres email" class="contact__form-input">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="wiadomość..." class="contact__form-area"></textarea>
+                    <input type="text" placeholder="imię" data-name="form-element" class="contact__form-input" required>
+                    <input type="text" placeholder="nazwisko" data-name="form-element" class="contact__form-input" required>
+                    <input type="email" placeholder="adres email" data-name="form-element" class="contact__form-input" required>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="wiadomość..." data-name="form-element" class="contact__form-area" maxlength="255"></textarea>
                     <button class="contact__form-button">Wyślij</button>
                 </form>
             </div>

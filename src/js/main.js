@@ -7,6 +7,7 @@ import '../assets/doctor3_640.jpg';
 //HAMBURGER
 const hamburgerElement = document.querySelector('.hamburger');
 const navigation = document.querySelector('.navigation');
+const formInputs = [...document.querySelectorAll('.contact__form > *[data-name="form-element"]')];
 
 hamburgerElement.addEventListener('click', () => {
 	hamburgerElement.classList.toggle('open');
@@ -33,5 +34,16 @@ priceItems.forEach(item => {
 			icon.style.transform = 'scale(1)';
 			item.style.height = `${headerHeight}px`;
 		}
+	});
+});
+
+//Form remove placeholder on focus
+formInputs.forEach(input => {
+	input.addEventListener('focus', function(e) {
+		const valueBefore = e.target.placeholder;
+		e.target.placeholder = '';
+		input.addEventListener('blur', function(e) {
+			e.target.placeholder = valueBefore;
+		});
 	});
 });
