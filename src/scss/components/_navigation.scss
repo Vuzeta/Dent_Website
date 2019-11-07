@@ -12,6 +12,11 @@
     height: 80vh;
   }
 
+  @include mq(medium) {
+    width: 70vw;
+    height: 50vh;
+  }
+
   &--show {
     left: -30%;
 
@@ -19,8 +24,6 @@
       left: -55%;
     }
   }
-
-
 
   &__list {
     display: flex;
@@ -51,9 +54,5 @@
     height: 100%;
     padding-right: 50px;
     transition: 0.2s;
-
-    // &:hover {
-    //   background-color: rgba(40, 195, 255, 0.9);
-    // }
   }
 }

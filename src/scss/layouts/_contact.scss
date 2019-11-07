@@ -50,6 +50,10 @@
         color: $color-white;
         text-shadow: 0 1px 4px rgba(0,0,0,.2);
         z-index: 1;
+
+        @include mq(medium) {
+            font-size: $font-size-large;
+        }
     }
 
     &__form {
@@ -59,6 +63,11 @@
         flex-wrap: wrap;
         padding: 0px 20px;
         z-index: 1;
+
+        @include mq(medium) {
+            width: 70%;
+            margin: 0 auto;
+        }
     }
 
     &__form-input {
@@ -128,6 +137,12 @@
             align-items: center;
             height: 150px;
           }
+
+          @include mq(medium) {
+            flex-direction: row;
+            align-items: center;
+            height: 150px;
+        }
     }
 
     &__info-description {
