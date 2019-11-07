@@ -3,6 +3,11 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
+
+    @media (orientation: landscape) and (min-width: 640px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, 1fr);
+    }
   }
   &__item {
     display: flex;
@@ -59,6 +64,12 @@
     width: 37px;
     height: 2px;
     background-color: $color-light-blue;
+  }
+
+  &__item:nth-child(5) &__line {
+    @media (orientation: landscape) and (min-width: 640px) {
+      width: 0;
+    }
   }
 
   &__item:nth-child(6) &__line {

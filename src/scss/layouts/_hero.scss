@@ -6,6 +6,10 @@
   height: 80vh;
   overflow: hidden;
 
+  @media (orientation: landscape) and (min-width: 640px) {
+    height: 100vh;
+  }
+
   &__video {
     position: absolute;
     top: 0%;
@@ -14,6 +18,11 @@
     min-width: 100%;
     min-height: 100%;
     z-index: 0;
+
+    @media (orientation: landscape) and (min-width: 640px) {
+      transform: translateY(-10%) translateX(-20%);
+    }
+    
   }
 
   &__title {
@@ -27,5 +36,9 @@
     color: $color-white;
     background-color: rgba(0, 0, 0, 0.5);
     line-height: 10vh;
+
+    @media (orientation: landscape) and (min-width: 640px) {
+      line-height: 15vh;
+    }
   }
 }

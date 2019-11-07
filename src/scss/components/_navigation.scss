@@ -1,16 +1,26 @@
 .navigation {
   position: absolute;
   top: 70px;
-  left: -100%;
+  left: -150%;
   background-color: rgba(40, 195, 255, 0.98);
   width: 100vw;
   height: 70vh;
   transition: 0.25s linear;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  
+  @media (orientation: landscape) and (min-width: 640px) {
+    height: 80vh;
+  }
 
   &--show {
-    left: -10%;
+    left: -30%;
+
+    @media (orientation: landscape) and (min-width: 640px) {
+      left: -55%;
+    }
   }
+
+
 
   &__list {
     display: flex;
