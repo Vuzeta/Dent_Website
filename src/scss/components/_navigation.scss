@@ -1,20 +1,26 @@
 .navigation {
-  position: absolute;
-  top: 70px;
-  left: -150%;
-  background-color: rgba(40, 195, 255, 0.98);
-  width: 100vw;
-  height: 70vh;
-  transition: 0.25s linear;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
-  
-  @media (orientation: landscape) and (min-width: 640px) {
-    height: 80vh;
+  &--phone {
+    position: absolute;
+    top: 70px;
+    left: -150%;
+    background-color: rgba(40, 195, 255, 0.98);
+    width: 100vw;
+    height: 70vh;
+    transition: 0.25s linear;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+
+    @media (orientation: landscape) and (min-width: 640px) {
+      height: 80vh;
+    }
+
+    @include mq(medium) {
+      width: 70vw;
+      height: 50vh;
+    }
   }
 
-  @include mq(medium) {
-    width: 70vw;
-    height: 50vh;
+  &--large {
+    width: 50%;
   }
 
   &--show {
@@ -32,11 +38,21 @@
     justify-content: space-around;
     align-items: flex-end;
     list-style: none;
+
+    @include mq(large) {
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+    }
   }
 
   &__item {
     text-align: center;
     flex-grow: 1;
+
+    @include mq(large) {
+      display: flex;
+    }
   }
 
   &__link {
@@ -54,5 +70,30 @@
     height: 100%;
     padding-right: 50px;
     transition: 0.2s;
+
+    @include mq(large) {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 25%;
+      padding: 10px;
+      flex-direction: row;
+      color: $color-light-blue;
+
+      &:hover::after {
+        width: 70%;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 15%;
+        width: 0%;
+        height: 2px;
+        background-color: $color-light-blue;
+        transition: 0.3s;
+      }
+    }
   }
 }
