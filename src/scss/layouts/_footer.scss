@@ -6,7 +6,15 @@
     line-height: 30px;
     text-align: center;
 
+    @include mq(large) {
+        background-color: $color-light-blue
+    }
+
     &__description {
         color: $color-light-blue;
+
+        @include mq(large) {
+            color: $color-white;
+        }
     }
 }

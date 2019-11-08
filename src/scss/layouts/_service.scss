@@ -13,6 +13,12 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(3, 1fr);
     }
+
+    @include mq(large) {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+      
   }
   &__item {
     display: flex;

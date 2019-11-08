@@ -14,9 +14,13 @@
 		@include mq(medium) {
 			flex-direction: row;
 			min-height: auto;
-			padding: 0px 20px 0x 0px;
+			padding: 0px 20px 0px 0px;
 			min-height: 350px;
 		}
+
+		@include mq(large) {
+			padding:20px 20px 20px 0px;
+		  }
 	}
 
 	&__wrapper-info {
@@ -24,11 +28,15 @@
 		flex-direction: column;
 		justify-content: space-around;
 		align-items: center;
-    height: 250px;
+    	height: 250px;
     
-    @include mq(medium) {
-      width: 100%;
+		@include mq(medium) {
+			width: 100%;
 		}
+
+		@include mq(large) {
+			height: 350px;
+		  }
 	}
 
 	&__title {
@@ -64,9 +72,13 @@
 		}
 
 		@include mq(medium) {
-      width: 100%;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     	 	width: 100%;
+         	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		}
+
+		@include mq(large) {
+			height: 350px;
+		  }
 	}
 
 	&__image {
@@ -77,6 +89,10 @@
 		left: 0;
 		opacity: 0;
 		animation: changeImage 12s infinite linear;
+
+		@include mq(large) {
+			height: 350px;
+		  }
 
 		&:nth-child(2) {
 			animation-delay: 4s;
