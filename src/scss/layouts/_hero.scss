@@ -72,6 +72,10 @@
     }
   }
 
+  &__btn-span {
+    z-index: 1;
+  }
+
   &__btn {
     display: flex;
     justify-content: center;
@@ -93,6 +97,27 @@
     letter-spacing: 0.32px;
     cursor: pointer;
     outline: none;
-    z-index: 1;   
+    z-index: 1;
+    overflow: hidden;
+
+    @include mq(xlarge) {
+      &:hover {
+        color: $color-white;
+      }
+
+      &:hover::after {
+        width: 110%;
+      }
+      &::after {
+        content: '';
+        width: 0%;
+        height: 110%;
+        background-color: $color-light-blue;
+        position: absolute;
+        top: 0;
+        left: -10%;
+        transition: .3s;
+      }
+    }
   }
 }
