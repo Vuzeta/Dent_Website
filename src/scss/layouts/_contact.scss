@@ -2,9 +2,6 @@
     display: flex;
     flex-direction: column;
 
-
-
-
     &__contact-form-wrapper {
         position: relative;
         top: 0;
@@ -17,6 +14,14 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+
+        @include mq(large) {
+            background-image: url('../assets/form_1280.jpg');
+        }
+
+        @include mq(xxlarge) {
+            background-image: url('../assets/form_1920.jpg');
+        }
     }
 
     &__shadow {
@@ -50,7 +55,7 @@
         font-size: $font-size-medium-large;
         text-align: center;
         color: $color-white;
-        text-shadow: 0 1px 4px rgba(0,0,0,.2);
+        text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
         z-index: 1;
 
         @include mq(medium) {
@@ -70,11 +75,19 @@
             width: 70%;
             margin: 0 auto;
         }
+
+        @include mq(xlarge) {
+            width: 60%;
+          }
     }
 
     &__form-input {
         margin-bottom: 15px;
         height: 35px;
+
+        @include mq(xlarge) {
+            height: 40px;
+          }
     }
 
     &__form-input, &__form-area {
@@ -121,11 +134,20 @@
         color: $color-light-blue;
         font-weight: $font-weight-bold;
         box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        transition: .2s;
 
         &:active {
             color: $color-white;
             background-color: $color-light-blue;
         }
+
+        @include mq(xlarge) {
+            &:hover {
+                color: $color-white;
+                background-color: $color-light-blue;
+                cursor: pointer;
+            }
+          }
     }
 
     &__info-wrapper {

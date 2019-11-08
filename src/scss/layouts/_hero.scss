@@ -46,6 +46,10 @@
       font-size: $font-size-XL;
     }
 
+    @include mq(xlarge) {
+      font-size: $font-size-XL + 1rem;
+    }
+
     &::after {
       content: '';
       position: absolute;

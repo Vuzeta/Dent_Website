@@ -36,6 +36,10 @@ margin-bottom: 30px;
       height: 350px;
       justify-content: space-evenly;
     }
+
+    @include mq(xlarge) {
+      height: 400px;
+    }
   }
   &__image {
     height: 300px;
@@ -58,6 +62,12 @@ margin-bottom: 30px;
     @include mq(large) {
       height: 350px;
     }
+    
+    
+    @include mq(xlarge) {
+      height: 400px;
+    }
+    
   }
   &__title {
     text-align: center;
@@ -86,6 +96,15 @@ margin-bottom: 30px;
     justify-content: space-between;
     height: 50px;
     padding: 0px 20px;
+    transition: .2s;
+
+    @include mq(large) {
+      cursor: pointer;
+
+      &:hover {
+        background-color: #e3e3e3;
+      }
+    }
   }
 
   &__wrapper-title {

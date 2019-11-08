@@ -18,6 +18,10 @@
       max-width: 900px;
       margin: 0 auto;
     }
+
+    @include mq(xlarge) {
+      height: 1000px;
+    }
       
   }
   &__item {

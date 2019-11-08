@@ -79,7 +79,11 @@
 
 		@include mq(large) {
 			height: 350px;
-		  }
+			}
+			
+			@include mq(xlarge) {
+				height: 400px;
+			}
 	}
 
 	&__image {
@@ -93,7 +97,10 @@
 
 		@include mq(large) {
 			height: 350px;
-		  }
+			}
+			@include mq(xlarge) {
+				height: 400px;
+			}
 
 		&:nth-child(2) {
 			animation-delay: 4s;
