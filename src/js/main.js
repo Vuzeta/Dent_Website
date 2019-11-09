@@ -71,5 +71,9 @@ links.forEach(link =>
       duration: 900,
       offset: -70,
     });
+
+    if (window.screen.availWidth < 1024) {
+      showHamburger(hamburgerElement);
+    }
   }),
 );
