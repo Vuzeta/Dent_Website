@@ -19,7 +19,7 @@ const priceItems = [...document.querySelectorAll('.price__wrapper-list-item')];
 const formInputs = [...document.querySelectorAll('.contact__form > *[data-name="form-element"]')];
 const form = document.querySelector('.contact__form');
 const navigation = document.querySelector('.navigation');
-const navLinks = document.querySelectorAll('.navigation__link');
+const links = [...document.querySelectorAll('.link')];
 
 const screenWidth = screen.width;
 const tabletLandWidth = 1024;
@@ -62,7 +62,10 @@ if (screenWidth >= tabletLandWidth) {
 }
 
 //jump.js
-navLinks.forEach(link =>
+
+console.log(links);
+
+links.forEach(link =>
   link.addEventListener('click', function(e) {
     jump(`${e.target.hash}`, {
       duration: 900,
