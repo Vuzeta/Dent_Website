@@ -3,6 +3,8 @@ import showHamburger from './hamburger';
 import showTable from './showTable';
 import formSubmit from './formSubmit';
 import changeHero from './changeHero';
+import jump from 'jump.js';
+
 import '../scss/main.scss';
 import '../assets/doctor1_1280.jpg';
 import '../assets/doctor2_1280.jpg';
@@ -17,6 +19,7 @@ const priceItems = [...document.querySelectorAll('.price__wrapper-list-item')];
 const formInputs = [...document.querySelectorAll('.contact__form > *[data-name="form-element"]')];
 const form = document.querySelector('.contact__form');
 const navigation = document.querySelector('.navigation');
+const navLinks = document.querySelectorAll('.navigation__link');
 
 const screenWidth = screen.width;
 const tabletLandWidth = 1024;
@@ -57,3 +60,13 @@ if (screenWidth >= tabletLandWidth) {
     changeHero('desktop');
   }
 }
+
+//jump.js
+navLinks.forEach(link =>
+  link.addEventListener('click', function(e) {
+    jump(`${e.target.hash}`, {
+      duration: 900,
+      offset: -70,
+    });
+  }),
+);
