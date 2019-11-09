@@ -22,7 +22,14 @@
     @include mq(xlarge) {
       height: 1000px;
     }
-      
+
+    @include mq(xxlarge) {
+      max-width: 1440px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      height: auto;
+      padding: 20px;
+    }
   }
   &__item {
     display: flex;
@@ -43,6 +50,11 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+
+    @include mq(xxlarge) {
+      width: 65px;
+      height: 65px;
+    }
   }
 
   &__item:nth-child(1) &__icon {
@@ -66,6 +78,10 @@
 
   &__title {
     font-size: $font-size-medium-large;
+
+    @include mq(xxlarge) {
+      font-size: $font-size-large;
+    }
   }
 
   &__description {
@@ -73,12 +89,22 @@
     line-height: $line-height-small;
     color: $color-elegant-light;
     text-align: center;
+
+    @include mq(xxlarge) {
+      font-size: $font-size-medium;
+    }
   }
 
   &__line {
     width: 37px;
     height: 2px;
     background-color: $color-light-blue;
+  }
+
+  &__item:nth-child(4) &__line {
+    @include mq(xxlarge) {
+      width: 0;
+    }
   }
 
   &__item:nth-child(5) &__line {

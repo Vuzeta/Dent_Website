@@ -21,6 +21,10 @@
 
   &--large {
     width: 50%;
+
+    @include mq(xxlarge) {
+      width: 40%;
+    }
   }
 
   &--show {

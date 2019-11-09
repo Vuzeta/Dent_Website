@@ -26,6 +26,10 @@
     @include mq(large) {
       min-height: 120%;
     }
+
+    @include mq(xxlarge) {
+      transform: translateY(-10%) translateX(0%);
+    }
   }
 
   &__title {
@@ -38,7 +42,7 @@
     z-index: 1;
     color: $color-white;
     background-color: rgba(0, 0, 0, 0.3);
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
     line-height: 100vh;
     font-weight: $font-weight-normal;
 
@@ -48,6 +52,10 @@
 
     @include mq(xlarge) {
       font-size: $font-size-XL + 1rem;
+    }
+
+    @include mq(xxlarge) {
+      background-color: rgba(0, 0, 0, 0.5);
     }
 
     &::after {
@@ -93,7 +101,7 @@
     color: $color-light-blue;
     border-radius: 50px;
     box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     transition: all ease-in-out 300ms;
     font-weight: $font-weight-bold;
     text-transform: uppercase;
@@ -120,7 +128,7 @@
         position: absolute;
         top: 0;
         left: -10%;
-        transition: .3s;
+        transition: 0.3s;
       }
     }
   }
