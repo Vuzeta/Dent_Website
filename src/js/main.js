@@ -29,7 +29,7 @@ form.addEventListener('submit', e => formSubmit(e, formInputs));
 
 priceItems.forEach(item => {
   item.addEventListener('click', () => {
-    showTable(item);
+    showTable(item, priceItems);
   });
 });
 

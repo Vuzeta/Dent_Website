@@ -102,16 +102,33 @@
   }
 
   &__wrapper-list {
-    @include mq(large) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 40px;
+    max-width: 100%;
+
+    @include mq(medium) {
+      max-width: 80%;
+      margin: 0 auto;
     }
 
-    @include mq(xxlarge) {
-      max-width: 1440px;
-      margin: 30px auto;
+    @include mq(xlarge) {
+      position: relative;
+      margin: 0;
+    }
+  }
+
+  &__spec-icon {
+    display: none;
+
+    @include mq(xlarge) {
+      display: block;
+      background-image: url('../assets/implant.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      top: 85px;
+      right: -18%;
     }
   }
 
@@ -154,10 +171,6 @@
     height: 50px;
     overflow: hidden;
     transition: 0.5s;
-
-    @include mq(large) {
-      width: 45%;
-    }
   }
 
   &__wrapper-list-item--show {
