@@ -89,6 +89,6 @@ module.exports = {
       filename: '[name].css',
       publicPath: '../',
     }),
-    new CopyPlugin([{ from: 'src/assets', to: 'assets' }]),
+    new CopyPlugin([{ from: 'src/assets', to: 'assets', ignore: ['*.jpg', '*.png', '*.mp4'] }]),
   ],
 };

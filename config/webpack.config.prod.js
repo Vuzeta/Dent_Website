@@ -93,5 +93,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name]-[contenthash].css',
     }),
+    new CopyPlugin([{ from: 'src/assets', to: 'assets', ignore: ['*.jpg', '*.png', '*.mp4'] }]),
   ],
 };
