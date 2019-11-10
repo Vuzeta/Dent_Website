@@ -1,20 +1,20 @@
 .footer {
-    height: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 30px;
-    text-align: center;
+  display: flex;
+  height: 80px;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 30px;
+  text-align: center;
+
+  @include mq(large) {
+    background-color: $color-light-blue;
+  }
+
+  &__description {
+    color: $color-light-blue;
 
     @include mq(large) {
-        background-color: $color-light-blue
+      color: $color-white;
     }
-
-    &__description {
-        color: $color-light-blue;
-
-        @include mq(large) {
-            color: $color-white;
-        }
-    }
+  }
 }

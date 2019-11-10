@@ -3,9 +3,9 @@
     position: absolute;
     top: 70px;
     left: -150%;
-    background-color: rgba(40, 195, 255, 0.98);
     width: 100vw;
     height: 70vh;
+    background-color: rgba(40, 195, 255, 0.98);
     transition: 0.25s linear;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 
@@ -44,9 +44,9 @@
     list-style: none;
 
     @include mq(large) {
+      width: 100%;
       flex-direction: row;
       align-items: center;
-      width: 100%;
     }
   }
 
@@ -60,19 +60,18 @@
   }
 
   &__link {
-    display: block;
-    text-align: right;
-    width: 100vw;
-    text-decoration: none;
-    color: $color-white;
-    font-weight: $font-weight-medium;
-    font-size: $font-size-medium;
     display: flex;
+    width: 100vw;
+    height: 100%;
+    padding-right: 50px;
     flex-direction: column;
     justify-content: center;
     flex-grow: 1;
-    height: 100%;
-    padding-right: 50px;
+    color: $color-white;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-medium;
+    text-align: right;
+    text-decoration: none;
     transition: 0.2s;
 
     @include mq(large) {

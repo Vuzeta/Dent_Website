@@ -25,19 +25,19 @@
 
     @include mq(xxlarge) {
       max-width: 1440px;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 1fr);
       height: auto;
       padding: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
     }
   }
   &__item {
     display: flex;
+    height: 300px;
+    margin-top: 10px;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 300px;
-    margin-top: 10px;
 
     &:nth-child(1) {
       margin-top: 10px;
