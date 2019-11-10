@@ -1,34 +1,24 @@
 .hero {
   position: relative;
-  top: 0;
-  left: 0;
-  padding-top: 70px;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
   height: 80vh;
   overflow: hidden;
 
-  @media (orientation: landscape) and (min-width: 640px) {
-    height: 100vh;
-  }
+  // @media (orientation: landscape) and (min-width: 640px) {
+  //   height: 100vh;
+  // }
 
   &__video {
     position: absolute;
-    top: 0%;
-    left: 0%;
-    transform: translateX(-30%);
+    top: 0;
+    left: 0;
     min-width: 100%;
-    min-height: 100%;
-    z-index: 0;
+    height: 100%;
+    transform: translateX(-30%);
 
     @media (orientation: landscape) and (min-width: 640px) {
-      transform: translateY(-10%) translateX(-20%);
-    }
-
-    @include mq(large) {
-      min-height: 120%;
-    }
-
-    @include mq(xxlarge) {
-      transform: translateY(-10%) translateX(0%);
+      transform: translateX(0%);
     }
   }
 
@@ -42,7 +32,7 @@
     color: $color-white;
     background-color: rgba(0, 0, 0, 0.3);
     text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
-    line-height: 100vh;
+    line-height: 150vh;
     font-weight: $font-weight-normal;
     transform: translate(-50%, -50%);
     @include mq(medium) {
